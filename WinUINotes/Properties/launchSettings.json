@@ -1,0 +1,14 @@
+{
+  "profiles": {
+    "WinUINotes (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "WinUINotes (Unpackage)": {
+      "commandName": "Project"
+    },
+    "WinUINotes (VS2019)": {
+      "commandName": "Executable",
+      "executablePath": "win-x64\\WinUINotes.exe"
+    }
+  }
+}

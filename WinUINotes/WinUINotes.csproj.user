@@ -4,6 +4,6 @@
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup>
-    <ActiveDebugProfile>WinUINotes (Unpackaged)</ActiveDebugProfile>
+    <ActiveDebugProfile>WinUINotes (VS2019)</ActiveDebugProfile>
   </PropertyGroup>
 </Project>
