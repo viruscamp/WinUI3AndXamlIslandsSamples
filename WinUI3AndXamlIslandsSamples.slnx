@@ -1,6 +1,17 @@
 <Solution>
-  <Project Path="WinFormsApp1/WinFormsApp1.csproj" />
-  <Project Path="WinUI3App/WinUI3App.csproj" />
-  <Project Path="WinUINotes/WinUINotes.csproj" />
-  <Project Path="WpfApp1/WpfApp1.csproj" />
+  <Configurations>
+    <Platform Name="x64" />
+  </Configurations>
+  <Project Path="WinFormsApp1/WinFormsApp1.csproj">
+    <Platform Solution="*|x64" Project="x64" />
+  </Project>
+  <Project Path="WinUI3App/WinUI3App.csproj">
+    <Platform Solution="*|x64" Project="x64" />
+  </Project>
+  <Project Path="WinUINotes/WinUINotes.csproj">
+    <Platform Solution="*|x64" Project="x64" />
+  </Project>
+  <Project Path="WpfApp1/WpfApp1.csproj">
+    <Platform Solution="*|x64" Project="x64" />
+  </Project>
 </Solution>
