@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="WinFormsApp1/WinFormsApp1.csproj" />
+  <Project Path="WinUI3App/WinUI3App.csproj" />
+  <Project Path="WinUINotes/WinUINotes.csproj" />
+  <Project Path="WpfApp1/WpfApp1.csproj" />
+</Solution>
