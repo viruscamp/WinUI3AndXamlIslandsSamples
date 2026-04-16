@@ -1,4 +1,3 @@
-
 using System;
 using System.Windows.Forms;
 using Microsoft.UI.Xaml.Hosting;
@@ -11,25 +10,29 @@ namespace WinFormsApp1
     {
         private DesktopWindowXamlSource? _desktopWindowXamlSource;
 
-        private Panel panel1;
+        private UserControl panel1;
 
         public Form1()
         {
             InitializeComponent();
 
-            panel1 = new Panel();
+            panel1 = new UserControl();
             panel1.Dock = DockStyle.Fill;
+            this.Controls.Add(panel1);
 
             this.Load += Form1_Load;
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Form1_Load(object? sender, EventArgs e)
         {
+            var panelWindowId = new WindowId((ulong)panel1.Handle); // 官方示例直接转换
+            var wid = Microsoft.UI.Win32Interop.GetWindowIdFromWindow(panel1.Handle); // 文档 https://learn.microsoft.com/zh-cn/windows/apps/desktop/modernize/winrt-com-interop-csharp
+            //MessageBox.Show($"wid={wid.Value} panelWindowId={panelWindowId.Value}");
+
             _desktopWindowXamlSource = new DesktopWindowXamlSource();
             // 将XAML源附加到当前窗体上特定的面板或控件（比如一个Panel）的句柄
             var interop = _desktopWindowXamlSource;
-            Windowing_GetWindowIdFromWindow(panel1.Handle, out var windowId);
-            interop.Initialize(windowId);
+            interop.Initialize(wid);
 
             interop.Content = new Microsoft.UI.Xaml.Controls.TextBlock
             {
@@ -45,8 +48,5 @@ namespace WinFormsApp1
             // 将控件设置为桌面窗口源的内容
             //interop.Content = myControl;
         }
-
-        [DllImport("Microsoft.Internal.FrameworkUdk.dll")]
-        private static extern int Windowing_GetWindowIdFromWindow(IntPtr hwnd, out WindowId windowId);
     }
 }

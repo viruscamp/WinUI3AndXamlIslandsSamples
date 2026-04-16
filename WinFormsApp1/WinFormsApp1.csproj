@@ -10,7 +10,10 @@
     <UseWindowsForms>true</UseWindowsForms>
     <Nullable>enable</Nullable>
     <ImplicitUsings>disable</ImplicitUsings>
-    <Platforms>x64</Platforms>
+
+    <AppxPackage>false</AppxPackage>
+    <WindowsAppSDKSelfContained>true</WindowsAppSDKSelfContained>
+    <WindowsPackageType>None</WindowsPackageType>
   </PropertyGroup>
 
   <ItemGroup>

@@ -1,6 +1,6 @@
-
 using System;
 using System.Windows.Forms;
+using Microsoft.UI.Dispatching;
 
 namespace WinFormsApp1
 {
@@ -13,13 +13,16 @@ namespace WinFormsApp1
         static void Main()
         {
             global::WinRT.ComWrappersSupport.InitializeComWrappers();
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
-            //ApplicationConfiguration.Initialize();
+            // Island-support: This is required to use the WindowsAppSDK UI stack on the thread.
+            var controller = DispatcherQueueController.CreateOnCurrentThread();
 
+            //ApplicationConfiguration.Initialize();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+
+            // Island-support: Shut down the DispatcherQueue and all the WindowsAppSDK UI objects on the thread.
+            controller.ShutdownQueue();
         }
     }
 }
