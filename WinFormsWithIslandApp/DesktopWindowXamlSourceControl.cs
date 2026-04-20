@@ -110,6 +110,7 @@ namespace WinFormsWithIsland
         /// <summary>
         /// Sets the content of the DesktopWindowXamlSource.
         /// </summary>
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public FrameworkElement? Content
         {
             get

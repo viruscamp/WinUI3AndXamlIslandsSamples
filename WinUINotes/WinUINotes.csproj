@@ -5,8 +5,8 @@
     <OutputType>WinExe</OutputType>
     <TargetFrameworks>net10.0-windows10.0.19041</TargetFrameworks>
     <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
-    <PlatformTargets>x64</PlatformTargets>
     <RuntimeIdentifiers>win-x64</RuntimeIdentifiers>
+    <Platforms>x64</Platforms>
 
     <UseWinUI>true</UseWinUI>
     <ImplicitUsings>false</ImplicitUsings>
@@ -20,7 +20,6 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <PublishProfile>win-$(Platform).pubxml</PublishProfile>
     <EnableMsixTooling>true</EnableMsixTooling>
-    <Platforms>x64</Platforms>
   </PropertyGroup>
 
   <ItemGroup>
