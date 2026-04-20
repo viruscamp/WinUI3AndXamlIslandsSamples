@@ -7,6 +7,18 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>      <!-- 第一行固定高度 -->
+            <RowDefinition Height="*"/>       <!-- 第二行占满剩余空间 -->
+            <RowDefinition Height="60"/>      <!-- 第三行固定高度 -->
+        </Grid.RowDefinitions>
 
+        <!-- 第一行：按钮 -->
+        <Button Grid.Row="0" Content="点击我" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="30"/>
+
+        <local:XamlIslandHost Grid.Row="1" />
+
+        <!-- 第三行：文本框 -->
+        <TextBox Grid.Row="2" Text="输入内容..." HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10,0"/>
     </Grid>
 </Window>
