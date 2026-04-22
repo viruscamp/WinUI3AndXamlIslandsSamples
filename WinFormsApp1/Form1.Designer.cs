@@ -35,7 +35,25 @@ namespace WinFormsApp1
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Text = "Form1";
+
+            textBox1 = new System.Windows.Forms.TextBox();
+            textBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            textBox1.Text = "TextBox";
+            this.Controls.Add(textBox1);
+
+            panel1 = new System.Windows.Forms.UserControl();
+            panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Controls.Add(panel1);
+
+            button1 = new System.Windows.Forms.Button();
+            button1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            button1.Text = "Click";
+            this.Controls.Add(button1);
         }
+
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.UserControl panel1;
+        private System.Windows.Forms.Button button1;
 
         #endregion
     }

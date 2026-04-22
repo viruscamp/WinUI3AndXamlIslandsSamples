@@ -10,16 +10,9 @@ namespace WinFormsApp1
     {
         private DesktopWindowXamlSource? _desktopWindowXamlSource;
 
-        private UserControl panel1;
-
         public Form1()
         {
             InitializeComponent();
-
-            panel1 = new UserControl();
-            panel1.Dock = DockStyle.Fill;
-            this.Controls.Add(panel1);
-
             this.Load += Form1_Load;
         }
 
