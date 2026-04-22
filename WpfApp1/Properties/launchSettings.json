@@ -5,10 +5,6 @@
     },
     "Unpackage": {
       "commandName": "Project"
-    },
-    "Unpackage VS2019": {
-      "commandName": "Executable",
-      "executablePath": "$(MSBuildProjectDirectory)\\bin\\$(Configuration)\\$(TargetFramework)\\win-x64\\$(TargetName).exe"
     }
   }
 }

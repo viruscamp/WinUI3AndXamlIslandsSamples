@@ -11,7 +11,6 @@
     <ImplicitUsings>enable</ImplicitUsings>
 
     <!-- Island-support: WindowsAppSDK supports only these platforms:-->
-    <Platforms>x64</Platforms>
     <RuntimeIdentifiers>win-x64</RuntimeIdentifiers>
 
     <!-- Island-support: Setting WindowsPackageType to "None" sets up machinery to 

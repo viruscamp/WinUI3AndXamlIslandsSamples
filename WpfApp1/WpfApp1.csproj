@@ -5,7 +5,6 @@
     <TargetFrameworks>net10.0-windows10.0.19041</TargetFrameworks>
     <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
     <RuntimeIdentifiers>win-x64</RuntimeIdentifiers>
-    <Platforms>x64</Platforms>
 
     <UseWPF>true</UseWPF>
     <Nullable>enable</Nullable>
@@ -21,4 +20,22 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.8.260317003" />
   </ItemGroup>
+
+<Target Name="DebugMSBuild" BeforeTargets="ResolvePackageAssets">
+    <Message Text="输出 $(MSBuildTargetName) $(MSBuildProjectDirectory)\bin\$(Configuration)\$(PlatformTarget)\$(TargetFramework)\$(RuntimeIdentifier)\$(TargetName).exe" Importance="high" />
+
+    <Message Text="变量 Platform=$(Platform) PlatformName=$(PlatformName) PlatformTarget=$(PlatformTarget)" Importance="high" />
+    <Message Text="变量 UseRidGraph=$(UseRidGraph) UseCurrentRuntimeIdentifier=$(UseCurrentRuntimeIdentifier) NETCoreSdkPortableRuntimeIdentifier=$(NETCoreSdkPortableRuntimeIdentifier)" Importance="high" />
+
+    <Message Text="变量 BuildingInsideVisualStudio=$(BuildingInsideVisualStudio) RuntimeIdentifier=$(RuntimeIdentifier)" Importance="high" />
+
+    <Message Text="变量 MSBuildVersion=$(MSBuildVersion) MSBuildBinPath=$(MSBuildBinPath)" Importance="high" />
+
+    <Message Text="变量 UsingNETSdkDefaults=$(UsingNETSdkDefaults)" Importance="high" />
+    <Message Text="变量 AppendPlatformToOutputPath=$(AppendPlatformToOutputPath)" Importance="high" />
+    <Message Text="变量 UseArtifactsOutput=$(UseArtifactsOutput)" Importance="high" />
+    <Message Text="变量 AppendRuntimeIdentifierToOutputPath=$(AppendRuntimeIdentifierToOutputPath)" Importance="high" />
+
+    <Message Text="变量 OutDir=$(OutDir) TargetName=$(TargetName)" Importance="high" />
+</Target>
 </Project>
